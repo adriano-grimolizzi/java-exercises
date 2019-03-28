@@ -42,5 +42,9 @@ public class AppTest extends TestCase {
 		
 		assertTrue(App.getPath(lines2).equals(">x>v<<<vx>><<<^>xx^x<<"));
 		
+		String[] lines3 = new String[] {".o", ".*"};
+		
+		assertTrue(App.getPath(lines3).equals(">xv<<>x^<<"));
+		
 	}
 }
