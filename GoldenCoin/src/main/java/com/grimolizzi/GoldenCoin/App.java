@@ -45,12 +45,10 @@ public class App {
 
 		for (char c : line.toCharArray()) {
 			if (c == i.getSymbol()) {
-				result = result + "x";
-			} else {
-				result = result + horizontalDir.getSymbol();
+				result += "x";
 			}
+			result += horizontalDir.getSymbol();
 		}
-
 		return result;
 	}
 	

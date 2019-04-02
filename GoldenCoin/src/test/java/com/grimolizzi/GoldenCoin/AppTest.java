@@ -28,23 +28,23 @@ public class AppTest extends TestCase {
 		
 		assertTrue(Utils.countCoin(".o..oo.o.") == 4);
 
-		assertTrue(App.getPath(".oo..", HorizontalDirection.LEFT, Item.COIN).equals("<<xx<"));
+		assertTrue(App.getPath(".oo..", HorizontalDirection.LEFT, Item.COIN).equals("<<x<x<<"));
 		
 		String[] lines = new String[] {".o..", "o.*o", ".o..", "...."};
 		
 		assertTrue(Utils.countCoin(lines) == 4);
 		
-		assertTrue(App.getPath(lines).equals(">x>>vx<<xv>x>>v<<<<>>>>^<<<<^>>x>^<<<<"));
+		assertTrue(App.getPath(lines).equals(">x>>>vx<<<x<v>x>>>v<<<<>>>>^<<<<^>>x>>^<<<<"));
 		
 		String[] lines2 = new String[] {".o*", ".**", "o.."};
 		
 		System.out.println();
 		
-		assertTrue(App.getPath(lines2).equals(">x>v<<<vx>><<<^>xx^x<<"));
+		assertTrue(App.getPath(lines2).equals(">x>>v<<<vx>>><<<^>x>x>^x<<<"));
 		
 		String[] lines3 = new String[] {".o", ".*"};
 		
-		assertTrue(App.getPath(lines3).equals(">xv<<>x^<<"));
+		assertTrue(App.getPath(lines3).equals(">x>v<<>x>^<<"));
 		
 	}
 }
